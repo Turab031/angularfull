@@ -1,0 +1,52 @@
+<p>data-binding works!</p>
+
+<table style="width: 100%;">
+    <tr>
+        <td>
+            <span>{{courseName}}</span>
+        </td>
+        <td>
+            <input type="text" value="{{rollno}}">
+        </td>
+        <td>
+            {{currentDate}}
+        </td>
+        
+    </tr>
+    <tr>
+        <td>
+            <input type="text" [value]="rollno">
+        </td>
+        <td>
+            <span [class]='spanClassName' >demo text</span>
+        </td>
+    </tr>
+    <br>
+    <br>
+
+
+    <tr>
+        <td>
+            {{rollno}}
+        </td>
+        <td>
+            <input type="text"  [(ngModel)]="rollno" >
+        </td>
+    </tr>
+</table>
+<br>
+<hr>
+<table>
+    <tr>
+        <td>
+            <button (click)="showAlert()">show alert</button>
+        </td>
+        <td>
+            <select (click)="onCityChange()">
+                <option value="">nagpur</option>
+                <option value="">pune</option>
+                <option value="">mumbai</option>
+            </select>
+        </td>
+    </tr>
+</table>
