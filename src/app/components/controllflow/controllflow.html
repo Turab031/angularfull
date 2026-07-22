@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-3">
+    <select [(ngModel)]="selectedCaste" class="form-select">
+      <option>ABC cast</option>
+      <option>DEF cast</option>
+      <option>MNO cast</option>
+      <option>other</option>
+    </select>
+  </div>
+  <div class="col-3">
+    @if (selectedCaste == 'other') {
+      <input type="text" class="form-control" placeholder="other value" />
+    }
+  </div>
+</div>
+<hr />
+<div class="row">
+  <div class="col-4">
+    @if (isActive() == true) {
+      <span class="text-success">student is active</span>
+    } @else {
+      <span class="text-danger">student is deactive</span>
+    }
+  </div>
+  <div class="col-4">
+    <button class="btn btn-success" (click)="changeStatus(true)">make active</button>
+    <button class="btn btn-warning mx-2" (click)="changeStatus(false)">make de active</button>
+  </div>
+</div>
