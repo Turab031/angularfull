@@ -14,5 +14,15 @@ export class Controllflow {
     this.isActive.set(value)
 
   }
+  cityList =["pune","nagpur","mumbai"]
+
+  studentList=[
+    {name:"aaa",city:"pune",status:true},
+    {name:"bbb",city:"mumbai",status:true},
+    {name:"ccc",city:"pune",status:false},
+    {name:"ddd",city:"nagpur",status:true}
+
+
+  ]
 
 }

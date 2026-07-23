@@ -27,3 +27,50 @@
     <button class="btn btn-warning mx-2" (click)="changeStatus(false)">make de active</button>
   </div>
 </div>
+
+<hr />
+<br />
+<div class="row">
+  <div class="col-3">
+    <ul>
+      @for (item of cityList; track $index) {
+        <li>
+          {{ item }}
+        </li>
+      }
+    </ul>
+  </div>
+</div>
+
+<hr>
+<div class="row">
+  <div class="col-4">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Sr No</th>
+          <th>Name</th>
+          <th>City</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        @for (item of studentList; track $index) {
+          <tr>
+            <td>{{ $index + 1 }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.city }}</td>
+            <td>
+              @if (item.status) {
+                <h6 class="text-success">Active</h6>
+              } @else {
+                <h6 class="text-danger">De-active</h6>
+              }
+            </td>
+          </tr> 
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
