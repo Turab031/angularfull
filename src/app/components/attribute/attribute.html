@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-4" [ngClass]="themeclass">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Sr No</th>
+          <th>Name</th>
+          <th>City</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        @for (item of studentList; track $index) {
+          <tr>
+            <td [ngClass]="item.status == true ? 'bg-success' : 'bg-danger'">{{ $index + 1 }}</td>
+            <td [ngClass]="item.status == true ? 'bg-success' : 'bg-danger'">{{ item.name }}</td>
+            <td [ngClass]="item.status == true ? 'bg-success' : 'bg-danger'">{{ item.city }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
