@@ -6,10 +6,11 @@ import { DataBinding } from './components/data-binding/data-binding';
 import { Signal } from './components/signal/signal';
 import { Controllflow } from './components/controllflow/controllflow';
 import { Attribute } from './components/attribute/attribute';
+import { Photos } from './components/photos/photos';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,RouterLink],
+  imports: [RouterOutlet,Photos,RouterLink],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
